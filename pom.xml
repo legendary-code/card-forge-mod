@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.eternal0.slay.the.spire.mods</groupId>
+    <artifactId>card-forge</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <artifactId>BaseMod-root</artifactId>
+            <groupId>basemod</groupId>
+            <version>5.6.0</version>
+            <scope>system</scope>
+            <systemPath>C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1605833019/BaseMod.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.badlogicgames</groupId>
+            <artifactId>desktop-1.0</artifactId>
+            <version>1.9.5</version>
+            <scope>system</scope>
+            <systemPath>C:/Program Files (x86)/Steam/steamapps/common/SlayTheSpire/desktop-1.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.evacipated.cardcrawl.mod</groupId>
+            <artifactId>stslib</artifactId>
+            <version>1.11.0</version>
+            <scope>system</scope>
+            <systemPath>C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1609158507/StSLib.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>ModTheSpire</artifactId>
+            <version>3.7.4</version>
+            <scope>system</scope>
+            <systemPath>C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1605060445/ModTheSpire.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

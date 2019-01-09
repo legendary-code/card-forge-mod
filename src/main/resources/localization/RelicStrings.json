@@ -1,0 +1,23 @@
+{
+  "Seething Fire": {
+    "NAME": "Seething Fire",
+    "FLAVOR": "A hot smoldering fire that can destroy any cards",
+    "DESCRIPTIONS": [
+      "Right-clicking this relic allows you to destroy any cards"
+    ]
+  },
+  "Anvil of the Gods": {
+    "NAME": "Anvil of the Gods",
+    "FLAVOR": "A great anvil capable of upgrading any cards",
+    "DESCRIPTIONS": [
+      "Right-clicking this relic allows you upgrade any cards"
+    ]
+  },
+  "Hammer of Thor": {
+    "NAME": "Hammer of  Thor",
+    "FLAVOR": "The hammer of Thor himself, capable of crafting any cards",
+    "DESCRIPTIONS": [
+      "Right-clicking this relic allows you craft any cards"
+    ]
+  }
+}
