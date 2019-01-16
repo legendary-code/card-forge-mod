@@ -10,6 +10,7 @@ import com.badlogic.gdx.Gdx;
 import com.eternal0.slay.the.spire.mods.relics.AnvilOfTheGodsRelic;
 import com.eternal0.slay.the.spire.mods.relics.HammerOfThorRelic;
 import com.eternal0.slay.the.spire.mods.relics.SeethingFireRelic;
+import com.eternal0.slay.the.spire.mods.ui.ScreenManager;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.RelicStrings;
@@ -22,6 +23,7 @@ public class CardForgeMod implements PostDungeonInitializeSubscriber, EditRelics
 
     public static void initialize() {
         BaseMod.subscribe(new CardForgeMod());
+        BaseMod.subscribe(ScreenManager.INSTANCE);
     }
 
     public void receiveEditStrings() {

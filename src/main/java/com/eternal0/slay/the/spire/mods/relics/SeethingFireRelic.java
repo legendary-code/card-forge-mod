@@ -36,7 +36,7 @@ public class SeethingFireRelic extends CardGridRelic {
         final int count = cards.size();
         final float min = -15.0f * count;
         for (int i = 0; i < count; ++i) {
-            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(i), (float) Settings.WIDTH / 2.0F + (min + i * 30.0f) * Settings.scale - AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(cards.get(i), (float) Settings.WIDTH / 2.0F + (min + i * 30.0f) * Settings.scale - AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
         }
 
         cards.forEach(AbstractDungeon.player.masterDeck::removeCard);

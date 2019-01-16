@@ -1,14 +1,13 @@
 package com.eternal0.slay.the.spire.mods.relics;
 
 import basemod.abstracts.CustomRelic;
+import com.eternal0.slay.the.spire.mods.ui.ScreenManager;
+import com.eternal0.slay.the.spire.mods.ui.screens.CardSelectionScreen;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
-import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 
 import java.util.ArrayList;
 
@@ -24,7 +23,8 @@ public abstract class CardGridRelic  extends CustomRelic implements ClickableRel
     protected abstract void onCardsSelected(ArrayList<AbstractCard> cards);
 
     public void onRightClick() {
-        if (AbstractDungeon.screen != AbstractDungeon.CurrentScreen.MAP) {
+        if (AbstractDungeon.screen != AbstractDungeon.CurrentScreen.MAP ||
+            AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             return;
         }
 
@@ -36,16 +36,14 @@ public abstract class CardGridRelic  extends CustomRelic implements ClickableRel
 
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
 
-        open(getCardsToSelect());
-        used = true;
-    }
+        final CardSelectionScreen screen = new CardSelectionScreen(
+            getGridMessage(),
+            getCardsToSelect(),
+            this::onCardsSelected
+        );
+        ScreenManager.INSTANCE.show(screen);
 
-    private void open(CardGroup group) {
-        AbstractDungeon.gridSelectScreen.open(group, Integer.MAX_VALUE, getGridMessage(), false, false, false, true);
-        AbstractDungeon.gridSelectScreen.anyNumber = true;
-        AbstractDungeon.gridSelectScreen.confirmButton.show();
-        AbstractDungeon.gridSelectScreen.confirmButton.updateText(GridCardSelectScreen.TEXT[0]);
-        AbstractDungeon.gridSelectScreen.confirmButton.isDisabled = false;
+        used = true;
     }
 
     @Override

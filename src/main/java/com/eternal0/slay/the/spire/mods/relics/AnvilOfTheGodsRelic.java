@@ -41,7 +41,7 @@ public class AnvilOfTheGodsRelic extends CardGridRelic {
         final int count = cards.size();
         final float min = -15.0f * count;
         for (int i = 0; i < count; ++i) {
-            final AbstractCard card = AbstractDungeon.gridSelectScreen.selectedCards.get(i);
+            final AbstractCard card = cards.get(i);
             card.upgrade();
             AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F + (min + i * 30.0f) * Settings.scale - AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
         }
