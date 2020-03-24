@@ -46,14 +46,7 @@ public class CardForgeMod implements PostCreateStartingRelicsSubscriber, EditRel
         BaseMod.addRelic(new AnvilOfTheGodsRelic(), RelicType.SHARED);
         logger.info("Done adding relics");
     }
-/*
-    public void receivePostDungeonInitialize() {
-        logger.info("reached receivepostdungeoninitialize");
-        RelicLibrary.getRelic(SeethingFireRelic.ID).makeCopy().instantObtain();
-        RelicLibrary.getRelic(HammerOfThorRelic.ID).makeCopy().instantObtain();
-        RelicLibrary.getRelic(AnvilOfTheGodsRelic.ID).makeCopy().instantObtain();
-    }
-*/
+
     public void receivePostCreateStartingRelics(AbstractPlayer.PlayerClass pclass, ArrayList<String> relicslist) {
         logger.info("reached receivepostcreatestartingrelics");
         relicslist.add(HammerOfThorRelic.ID);
