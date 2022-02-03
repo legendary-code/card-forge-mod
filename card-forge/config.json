@@ -4,5 +4,5 @@
   "description": "Ever wanted to build that perfect deck with the exact cards you want?  This mod allows you to remove, add, and upgrade any cards in the game.  Upon starting any new game, three relics will be automatically added.  Right-clicking on any of these while in the map view will activate the appropriate card grid to add, remove, or upgrade cards. Enjoy!",
   "visibility": "public",
   "changeNote": "Sort all cards by color and name",
-  "tags": ["cards", "tools", "qol"]
+  "tags": ["cards", "qol"]
 }
