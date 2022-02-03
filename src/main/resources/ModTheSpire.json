@@ -3,9 +3,9 @@
   "name": "Card Forge",
   "author_list": [ "eternal0" ],
   "description": "Allows removing and adding of any cards to build a fully custom deck",
-  "version": "1.2",
-  "sts_version": "01-27-2020",
-  "mts_version": "3.0.0",
+  "version": "1.4",
+  "sts_version": "12-22-2020",
+  "mts_version": "3.22.0",
   "dependencies": [ "basemod", "stslib" ],
   "update_json": "https://api.github.com/repos/legendary-code/card-forge-mod/releases/latest"
 }

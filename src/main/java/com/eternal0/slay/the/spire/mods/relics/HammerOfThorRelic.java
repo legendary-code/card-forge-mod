@@ -1,5 +1,6 @@
 package com.eternal0.slay.the.spire.mods.relics;
 
+import com.eternal0.slay.the.spire.mods.utils.Cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
@@ -32,10 +33,9 @@ public class HammerOfThorRelic extends CardGridRelic {
         final CardGroup cards = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
         final List<AbstractCard> pool = CardLibrary.getAllCards();
 
-        pool.sort(BY_COLOR.thenComparing(BY_NAME));
         pool.forEach(cards::addToTop);
 
-        return cards;
+        return Cards.sorted(cards);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.eternal0.slay.the.spire.mods.relics;
 
+import com.eternal0.slay.the.spire.mods.utils.Cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
@@ -23,7 +24,7 @@ public class SeethingFireRelic extends CardGridRelic {
 
     @Override
     protected CardGroup getCardsToSelect() {
-        return AbstractDungeon.player.masterDeck.getPurgeableCards();
+        return Cards.sorted(AbstractDungeon.player.masterDeck.getPurgeableCards());
     }
 
     @Override

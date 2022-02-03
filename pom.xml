@@ -6,13 +6,13 @@
 
     <groupId>com.eternal0.slay.the.spire.mods</groupId>
     <artifactId>card-forge</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.4</version>
 
     <dependencies>
         <dependency>
             <artifactId>BaseMod-root</artifactId>
             <groupId>basemod</groupId>
-            <version>5.6.0</version>
+            <version>5.37.0</version>
             <scope>system</scope>
             <systemPath>C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1605833019/BaseMod.jar</systemPath>
         </dependency>
@@ -28,7 +28,7 @@
         <dependency>
             <groupId>com.evacipated.cardcrawl.mod</groupId>
             <artifactId>stslib</artifactId>
-            <version>1.11.0</version>
+            <version>2.1.0</version>
             <scope>system</scope>
             <systemPath>C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1609158507/StSLib.jar</systemPath>
         </dependency>
@@ -36,7 +36,7 @@
         <dependency>
             <groupId>com.evacipated.cardcrawl</groupId>
             <artifactId>ModTheSpire</artifactId>
-            <version>3.7.4</version>
+            <version>3.24.0</version>
             <scope>system</scope>
             <systemPath>C:/Program Files (x86)/Steam/steamapps/workshop/content/646570/1605060445/ModTheSpire.jar</systemPath>
         </dependency>

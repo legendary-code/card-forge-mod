@@ -1,5 +1,6 @@
 package com.eternal0.slay.the.spire.mods.relics;
 
+import com.eternal0.slay.the.spire.mods.utils.Cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,7 +28,7 @@ public class AnvilOfTheGodsRelic extends CardGridRelic {
 
     @Override
     protected CardGroup getCardsToSelect() {
-        return AbstractDungeon.player.masterDeck.getUpgradableCards();
+        return Cards.sorted(AbstractDungeon.player.masterDeck.getUpgradableCards());
     }
 
 
